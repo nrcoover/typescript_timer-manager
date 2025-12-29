@@ -11,7 +11,7 @@ type AnchorProps = ComponentPropsWithoutRef<"a"> & {
 const isAnchorProps = (
 	props: ButtonProps | AnchorProps
 ): props is AnchorProps => {
-	return "props" in props;
+	return "href" in props;
 };
 
 const Button = (props: ButtonProps | AnchorProps) => {
